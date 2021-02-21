@@ -1,0 +1,31 @@
+source,target,value
+Footwear,North America,2245
+Footwear,"Europe, Middle East & Africa",1419
+Footwear,Greater China,1022
+Footwear,Asia Pacific & Latin America,879
+Apparel,North America,1405
+Apparel,"Europe, Middle East & Africa",794
+Apparel,Asia Pacific & Latin America,360
+Apparel,Greater China,490
+Equipment,North America,132
+Equipment,"Europe, Middle East & Africa",100
+Equipment,Greater China,32
+Equipment,Asia Pacific & Latin America,59
+North America,NIKE Brand,3782
+"Europe, Middle East & Africa",NIKE Brand,2313
+Greater China,NIKE Brand,1544
+Asia Pacific & Latin America,NIKE Brand,1298
+Global Brand Divisions,NIKE Brand,9
+NIKE Brand,Revenues,8946
+Converse,Revenues,425
+Corporate,Revenues,3
+Revenues,Cost of sales,5269
+Revenues,Gross profit,4105
+Gross profit,Selling and administrative expense,3142
+Gross profit,Interest expense,14
+Gross profit,Income before taxes,949
+Other income,Income before taxes,48
+Selling and administrative expense,Demand creation expense,910
+Selling and administrative expense,Operating overhead expense,2232
+Income before taxes,Tax expense,150
+Income before taxes,Net income,847
