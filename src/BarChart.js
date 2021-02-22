@@ -67,7 +67,7 @@ export const BarChart = () => {
                     return height - y_scale(+d.frequency) - 40
                 })
                 .attr('fill', 'red')
-                .attr('transform', 'translate(')
+                // .attr('transform', 'translate(''))
                 .join('rect')
         })
     }, [])

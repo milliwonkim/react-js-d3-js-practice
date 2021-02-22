@@ -6,6 +6,7 @@ import Funnel from './Funnel'
 import Sankey from './Sankey'
 import Circle from './Circle'
 import DivergingBarChart from './DivergingBarChart'
+import BarChart2 from './BarChart2'
 
 function App() {
     return (
@@ -13,9 +14,10 @@ function App() {
             <BarChart />
             <Pie />
             <Funnel />
-            <Sankey />
             <Circle />
             <DivergingBarChart />
+            <Sankey />
+            <BarChart2 />
         </div>
     )
 }
