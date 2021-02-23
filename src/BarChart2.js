@@ -18,7 +18,7 @@ export default function BarChart2() {
 
     useEffect(() => {
         const margin = 50
-        const width = 1000 - 2 * margin
+        const width = 1500 - 2 * margin
         const height = 800 - 2 * margin
 
         const svg = d3
@@ -34,9 +34,9 @@ export default function BarChart2() {
 
         const xScale = d3
             .scaleBand()
-            .range([0, width - 100])
+            .range([0, width])
             .domain(sample.map((s) => s.language))
-            .padding(0.5)
+            .padding(0.7)
 
         const yScale = d3.scaleLinear().range([height, 0]).domain([0, 100])
 
@@ -50,13 +50,16 @@ export default function BarChart2() {
             .selectAll('rect')
             .data(sample)
             .enter()
+            .append('g')
+            .attr('class', 'outside')
+            .attr('transform', 'translate(0,0)')
             .append('rect')
             .attr('class', 'bars')
             .attr('fill', '#353b48')
             .attr('x', (s) => xScale(s.language))
             .attr('y', (s) => yScale(s.value))
             .attr('height', (s) => height - yScale(s.value))
-            .attr('width', xScale.bandwidth())
+            .attr('width', xScale.bandwidth() + 15)
 
         chart
             .append('g')
@@ -84,16 +87,15 @@ export default function BarChart2() {
 
         let bars = svg.selectAll('.bars')
 
-        bars.append('text')
-            .attr('x', (a) => xScale(a.language) + xScale.bandwidth() / 2)
-            .attr('y', (a) => yScale(a.value) + 30)
-            .attr('height', (g) => height - yScale(g.value))
-            .attr('width', xScale.bandwidth())
-            .attr('text-anchor', 'left')
+        svg.selectAll('.outside')
+            .append('text')
+            .attr('x', (a) => -10 + xScale(a.language) + xScale.bandwidth() / 2)
+            .attr('y', (a) => yScale(a.value) + 20)
             .text(function (d) {
                 return d.value + '%'
             })
-            .style('fill', '#ffffff')
+            .attr('fill', 'white')
+            .attr('font-size', '13px')
 
         bars.on('mouseover', function () {
             d3.select(this).attr('fill', '#40739e')
